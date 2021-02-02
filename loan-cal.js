@@ -12,6 +12,7 @@ function calculate(e) {
     const interst = document.getElementById('intrest');
     const years = document.getElementById('year-repay');
     const monthlyPayment = document.getElementById('month-pay');
+    const yearlyPayment = document.getElementById('year-pay');
     const totalPayment = document.getElementById('total-pay');
     const totalIntrest = document.getElementById('total-int');
     const principal = parseFloat(amount.value);
@@ -24,6 +25,9 @@ function calculate(e) {
         monthlyPayment.value = monthly.toFixed(2);
         totalPayment.value = (monthly * calculatedPayment).toFixed(2);
         totalIntrest.value = (monthly * calculatedPayment - principal).toFixed(2);
+
+        yearlyPayment.value= (monthly*12).toFixed(2);
+
         document.querySelector('.result-row').style.display = "block";
         document.querySelector('.loader').style.display="none";
     } else {
