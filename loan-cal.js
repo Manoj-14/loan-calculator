@@ -1,3 +1,9 @@
+const invalidMarks = document.querySelectorAll(".marks");
+const invalidMarks = document.querySelector(".credits");
+
+
+
+
 const widthBtn = document.querySelector('.cal-amt');
 widthBtn.style.width = '17rem';
 document.querySelector('#loan-cal').addEventListener("submit", function (e) {
@@ -31,9 +37,8 @@ function calculate(e) {
     } else {
         document.querySelector('.card h4').style.display = 'block';
         document.querySelector('.loader').style.display = "none";
-        setTimeout(function () {
+        setTimeout(function() {
             document.querySelector('.card h4').style.display = 'none';
         }, 3000);
     }
-
 }
